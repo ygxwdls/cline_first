@@ -3,19 +3,22 @@ import type { Book, NavItem, Rendition } from 'epubjs'
 
 export type { NavItem }
 
-interface ThemeRules {
-  body: Record<string, string>
-  a: Record<string, string>
-}
+type ThemeRules = Record<string, Record<string, string>>
 
 const THEMES: Record<'day' | 'night', ThemeRules> = {
   day: {
     body: { background: '#fafcfa', color: '#20261f', 'line-height': '1.75' },
-    a: { color: '#1f6a49' }
+    a: { color: '#1f6a49 !important' },
+    'a:visited': { color: '#1f6a49 !important' },
+    'a:hover': { color: '#17583c !important' },
+    'a:active': { color: '#17583c !important' }
   },
   night: {
     body: { background: '#141915', color: '#c9d2ca', 'line-height': '1.75' },
-    a: { color: '#6fd29a' }
+    a: { color: '#6fd29a !important' },
+    'a:visited': { color: '#6fd29a !important' },
+    'a:hover': { color: '#8fe0b0 !important' },
+    'a:active': { color: '#8fe0b0 !important' }
   }
 }
 
