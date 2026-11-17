@@ -1,0 +1,32 @@
+appId: com.lucky.epubreader
+productName: 阅读器
+directories:
+  buildResources: build
+  output: dist
+files:
+  - out/**
+  - "!**/.vscode/*"
+  - "!src/*"
+  - "!electron.vite.config.{js,ts,mjs,cjs}"
+  - "!{.env,.env.*,.npmrc,README.md}"
+asarUnpack:
+  - resources/**
+win:
+  executableName: epub-reader
+  target:
+    - nsis
+nsis:
+  artifactName: ${name}-${version}-setup.${ext}
+  shortcutName: ${productName}
+  uninstallDisplayName: ${productName}
+  createDesktopShortcut: always
+mac:
+  category: public.app-category.productivity
+  target:
+    - dmg
+linux:
+  target:
+    - AppImage
+  maintainer: local
+  category: Office
+npmRebuild: false
