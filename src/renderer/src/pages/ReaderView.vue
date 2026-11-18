@@ -333,19 +333,23 @@ function formatDuration(seconds: number): string {
   color: var(--muted);
   font-size: 14px;
   cursor: pointer;
-  padding: 4px 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .reader__back:hover {
-  color: var(--fg);
+  color: var(--accent);
+  background: var(--surface-2);
 }
 
 .reader__title {
   flex: 1;
   min-width: 0;
   text-align: center;
-  font-family: 'Songti SC', 'Noto Serif SC', 'Source Han Serif SC', STSong, serif;
+  font-family: 'Yuanti SC', 'YouYuan', '幼圆', 'PingFang SC', sans-serif;
   font-size: 15px;
+  font-weight: 600;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -363,12 +367,13 @@ function formatDuration(seconds: number): string {
   color: var(--muted);
   font-size: 14px;
   padding: 6px 10px;
-  border-radius: 5px;
+  border-radius: 999px;
   cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .reader__tools button:hover {
-  color: var(--fg);
+  color: var(--accent);
   background: var(--surface-2);
 }
 
@@ -429,13 +434,14 @@ function formatDuration(seconds: number): string {
 }
 
 .reader__state-btn {
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--fg);
+  border: 1px solid transparent;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
   padding: 8px 18px;
-  border-radius: 6px;
+  border-radius: 999px;
   cursor: pointer;
   font-size: 14px;
+  box-shadow: 0 4px 12px rgba(255, 111, 169, 0.25);
 }
 
 .reader__status {
@@ -456,15 +462,15 @@ function formatDuration(seconds: number): string {
 
 .reader__track {
   flex: 1;
-  height: 3px;
-  background: var(--border);
-  border-radius: 2px;
+  height: 6px;
+  background: var(--surface-2);
+  border-radius: 999px;
   overflow: hidden;
 }
 
 .reader__fill {
   height: 100%;
-  background: var(--accent);
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
   transition: width 0.2s ease;
 }
 </style>

@@ -7,18 +7,18 @@ type ThemeRules = Record<string, Record<string, string>>
 
 const THEMES: Record<'day' | 'night', ThemeRules> = {
   day: {
-    body: { background: '#fafcfa', color: '#20261f', 'line-height': '1.75' },
-    a: { color: '#1f6a49 !important' },
-    'a:visited': { color: '#1f6a49 !important' },
-    'a:hover': { color: '#17583c !important' },
-    'a:active': { color: '#17583c !important' }
+    body: { background: '#fffaf4', color: '#44303d', 'line-height': '1.75' },
+    a: { color: '#e84c95 !important' },
+    'a:visited': { color: '#e84c95 !important' },
+    'a:hover': { color: '#c93a7d !important' },
+    'a:active': { color: '#c93a7d !important' }
   },
   night: {
-    body: { background: '#141915', color: '#c9d2ca', 'line-height': '1.75' },
-    a: { color: '#6fd29a !important' },
-    'a:visited': { color: '#6fd29a !important' },
-    'a:hover': { color: '#8fe0b0 !important' },
-    'a:active': { color: '#8fe0b0 !important' }
+    body: { background: '#292235', color: '#d9cfe2', 'line-height': '1.75' },
+    a: { color: '#ff8fc1 !important' },
+    'a:visited': { color: '#ff8fc1 !important' },
+    'a:hover': { color: '#ffabd4 !important' },
+    'a:active': { color: '#ffabd4 !important' }
   }
 }
 

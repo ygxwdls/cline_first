@@ -63,7 +63,7 @@ const flatItems = computed<FlatTocItem[]>(() => {
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(15, 25, 17, 0.32);
+  background: rgba(48, 28, 40, 0.34);
   z-index: 50;
 }
 
@@ -80,6 +80,7 @@ const flatItems = computed<FlatTocItem[]>(() => {
 
 .panel--left {
   left: 0;
+  border-radius: 0 20px 20px 0;
 }
 
 .panel__head {
@@ -92,9 +93,10 @@ const flatItems = computed<FlatTocItem[]>(() => {
 
 .panel__title {
   margin: 0;
-  font-family: 'Songti SC', 'Noto Serif SC', 'Source Han Serif SC', STSong, serif;
+  font-family: 'Yuanti SC', 'YouYuan', '幼圆', 'PingFang SC', sans-serif;
   font-size: 17px;
   font-weight: 600;
+  color: var(--accent);
 }
 
 .panel__close {
@@ -105,6 +107,12 @@ const flatItems = computed<FlatTocItem[]>(() => {
   line-height: 1;
   cursor: pointer;
   padding: 0 4px;
+  border-radius: 50%;
+}
+
+.panel__close:hover {
+  color: var(--accent);
+  background: var(--surface-2);
 }
 
 .panel__scroll {
@@ -124,11 +132,12 @@ const flatItems = computed<FlatTocItem[]>(() => {
   line-height: 1.4;
   padding: 10px 20px;
   cursor: pointer;
-  transition: background-color 0.12s ease;
+  transition: background-color 0.12s ease, color 0.12s ease;
 }
 
 .toc-item:hover {
   background: var(--surface-2);
+  color: var(--accent);
 }
 
 .panel__empty {

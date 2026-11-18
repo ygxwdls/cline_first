@@ -74,7 +74,7 @@ function increaseFont(): void {
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(15, 25, 17, 0.32);
+  background: rgba(48, 28, 40, 0.34);
   z-index: 50;
 }
 
@@ -88,6 +88,7 @@ function increaseFont(): void {
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
+  border-radius: 20px 0 0 20px;
 }
 
 .panel__head {
@@ -100,9 +101,10 @@ function increaseFont(): void {
 
 .panel__title {
   margin: 0;
-  font-family: 'Songti SC', 'Noto Serif SC', 'Source Han Serif SC', STSong, serif;
+  font-family: 'Yuanti SC', 'YouYuan', '幼圆', 'PingFang SC', sans-serif;
   font-size: 17px;
   font-weight: 600;
+  color: var(--accent);
 }
 
 .panel__close {
@@ -113,6 +115,12 @@ function increaseFont(): void {
   line-height: 1;
   cursor: pointer;
   padding: 0 4px;
+  border-radius: 50%;
+}
+
+.panel__close:hover {
+  color: var(--accent);
+  background: var(--surface-2);
 }
 
 .panel__body {
@@ -147,16 +155,19 @@ function increaseFont(): void {
 .step-btn {
   flex: 1;
   border: 1px solid var(--border);
-  background: transparent;
+  background: var(--surface);
   color: var(--fg);
   padding: 9px 0;
-  border-radius: 6px;
+  border-radius: 999px;
   cursor: pointer;
   font-size: 14px;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
 .step-btn:hover {
   background: var(--surface-2);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .step-btn--plus {
@@ -166,18 +177,19 @@ function increaseFont(): void {
 .theme-btn {
   flex: 1;
   border: 1px solid var(--border);
-  background: transparent;
+  background: var(--surface);
   color: var(--fg);
   padding: 9px 0;
-  border-radius: 6px;
+  border-radius: 999px;
   cursor: pointer;
   font-size: 14px;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
 .theme-btn.is-active {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: var(--accent-soft);
+  border-color: transparent;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
 }
 
 .fade-enter-active,

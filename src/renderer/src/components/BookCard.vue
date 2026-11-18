@@ -63,17 +63,29 @@ function onRemoveClick(): void {
 .book-card {
   cursor: pointer;
   min-width: 0;
+  transition: transform 0.18s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
 }
 
 .book-card__cover {
   position: relative;
   aspect-ratio: 2 / 3;
   background: var(--surface-2);
-  border-radius: 4px;
+  border-radius: 8px;
+  border: 2px solid var(--border);
   box-shadow: var(--shadow);
   overflow: hidden;
   display: grid;
   place-items: center;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.book-card:hover .book-card__cover {
+  border-color: var(--accent-2);
+  box-shadow: 0 6px 18px rgba(85, 184, 255, 0.22), 0 16px 34px rgba(255, 111, 169, 0.18);
 }
 
 .book-card__cover img {
@@ -83,9 +95,14 @@ function onRemoveClick(): void {
 }
 
 .book-card__placeholder {
-  font-family: 'Songti SC', 'Noto Serif SC', 'Source Han Serif SC', STSong, serif;
-  font-size: 34px;
-  color: var(--muted);
+  font-family: 'Yuanti SC', 'YouYuan', '幼圆', 'PingFang SC', sans-serif;
+  font-size: 36px;
+  color: var(--accent);
+  background: linear-gradient(135deg, #ffffff, var(--surface-2));
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
 }
 
 .book-card__remove {
@@ -96,8 +113,8 @@ function onRemoveClick(): void {
   background: var(--surface);
   color: var(--muted);
   font-size: 12px;
-  padding: 4px 8px;
-  border-radius: 5px;
+  padding: 4px 9px;
+  border-radius: 999px;
   opacity: 0;
   cursor: pointer;
   transition: opacity 0.15s ease, background-color 0.15s ease, color 0.15s ease;
@@ -117,7 +134,7 @@ function onRemoveClick(): void {
 
 .book-card__title {
   margin: 12px 0 2px;
-  font-family: 'Songti SC', 'Noto Serif SC', 'Source Han Serif SC', STSong, serif;
+  font-family: 'Yuanti SC', 'YouYuan', '幼圆', 'PingFang SC', sans-serif;
   font-size: 15px;
   font-weight: 600;
   line-height: 1.4;
@@ -144,15 +161,15 @@ function onRemoveClick(): void {
 
 .book-card__track {
   flex: 1;
-  height: 2px;
-  background: var(--border);
-  border-radius: 1px;
+  height: 6px;
+  background: var(--surface-2);
+  border-radius: 999px;
   overflow: hidden;
 }
 
 .book-card__fill {
   height: 100%;
-  background: var(--accent);
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
 }
 
 .book-card__percent {

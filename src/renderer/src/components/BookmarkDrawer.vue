@@ -56,7 +56,7 @@ function formatTime(timestamp: number): string {
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(15, 25, 17, 0.32);
+  background: rgba(48, 28, 40, 0.34);
   z-index: 50;
 }
 
@@ -73,6 +73,7 @@ function formatTime(timestamp: number): string {
 
 .panel--right {
   right: 0;
+  border-radius: 20px 0 0 20px;
 }
 
 .panel__head {
@@ -85,23 +86,26 @@ function formatTime(timestamp: number): string {
 
 .panel__title {
   margin: 0;
-  font-family: 'Songti SC', 'Noto Serif SC', 'Source Han Serif SC', STSong, serif;
+  font-family: 'Yuanti SC', 'YouYuan', '幼圆', 'PingFang SC', sans-serif;
   font-size: 17px;
   font-weight: 600;
+  color: var(--accent);
 }
 
 .add-btn {
   border: 1px solid var(--accent);
-  background: transparent;
+  background: var(--accent-soft);
   color: var(--accent);
   font-size: 13px;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 5px 12px;
+  border-radius: 999px;
   cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .add-btn:hover {
-  background: var(--accent-soft);
+  background: var(--accent);
+  color: #fff;
 }
 
 .panel__scroll {
@@ -136,6 +140,7 @@ function formatTime(timestamp: number): string {
 .bookmark__percent {
   font-size: 14px;
   font-weight: 600;
+  color: var(--accent);
 }
 
 .bookmark__time {
